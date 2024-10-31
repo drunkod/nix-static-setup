@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define variables
-NIX_VERSION="2.18"
+NIX_VERSION="2.23"
 NIX_STATIC_URL="https://hydra.nixos.org/job/nix/maintenance-${NIX_VERSION}/buildStatic.x86_64-linux/latest/download-by-type/file/binary-dist"
 NIX_ROOT="$HOME/mynixroot"
 NIX_CONF_DIR="$HOME/.config/nix"
