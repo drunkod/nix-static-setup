@@ -74,3 +74,9 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## Acknowledgments
 
 - Thanks to the Nix community for their contributions and support.
+
+
+# Run apps --no-sandbox
+
+code  --no-sandbox
+google-chrome-stable --no-sandbox
