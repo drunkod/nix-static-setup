@@ -78,5 +78,12 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 # Run apps --no-sandbox
 
-code  --no-sandbox
+code --no-sandbox
 google-chrome-stable --no-sandbox
+
+# Run To enter a Nix shell:
+
+~/nixstatic shell nixpkgs#nix nixpkgs#bashInteractive nixpkgs#git --command bash
+
+fix error ssl
+git config --global http.sslVerify false
