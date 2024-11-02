@@ -87,3 +87,7 @@ google-chrome-stable --no-sandbox
 
 fix error ssl
 git config --global http.sslVerify false
+
+# Garbage
+
+~/nixstatic store gc
