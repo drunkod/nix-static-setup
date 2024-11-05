@@ -7,11 +7,11 @@ install_chrome() {
     echo 'Установка Google Chrome...'
     export NIXPKGS_ALLOW_UNFREE=1
     nix profile install nixpkgs#google-chrome --impure
-
-    # Проверка успешности установки
-    if command -v google-chrome-stable &> /dev/null; then
-        echo 'Google Chrome успешно установлен.'
-
+    # Проверка наличия google-chrome-stable в ~/.nix-profile/bin
+    if [ -f ~/.nix-profile/bin/google-chrome-stable ]; then
+        echo 'Google Chrome найден в ~/.nix-profile/bin. Запуск...'
+        ~/.nix-profile/bin/google-chrome-stable --no-sandbox
+    else
         # Обновление PATH в .bashrc
         echo 'export PATH=\"\$HOME/.nix-profile/bin:\$PATH\"' >> ~/.bashrc
         echo 'Обновлен PATH в ~/.bashrc.'
@@ -19,16 +19,13 @@ install_chrome() {
         # Перезагрузка .bashrc для обновления текущей сессии
         source ~/.bashrc
         google-chrome-stable --no-sandbox
-    else
-        echo 'Установка Google Chrome не удалась. Пожалуйста, проверьте вывод на наличие ошибок.'
-        exit 1
     fi
 }
 
-# Проверка, установлен ли Google Chrome
-if command -v google-chrome-stable &> /dev/null; then
-    echo 'Google Chrome уже установлен. Запуск...'
-    google-chrome-stable --no-sandbox
+# Проверка наличия google-chrome-stable в ~/.nix-profile/bin
+if [ -f ~/.nix-profile/bin/google-chrome-stable ]; then
+    echo 'Google Chrome найден в ~/.nix-profile/bin. Запуск...'
+    ~/.nix-profile/bin/google-chrome-stable --no-sandbox
 else
     echo 'Google Chrome не установлен.'
     read -p 'Хотите установить Google Chrome? (y/n): ' choice
@@ -39,3 +36,4 @@ else
     fi
 fi
 "
+

@@ -6,7 +6,9 @@ NIX_STATIC_URL="https://hydra.nixos.org/job/nix/maintenance-${NIX_VERSION}/build
 NIX_ROOT="$HOME/mynixroot"
 NIX_CONF_DIR="$HOME/.config/nix"
 NIX_CONF_FILE="$NIX_CONF_DIR/nix.conf"
-SSL_CERT_FILE="/etc/pki/tls/cert.pem"
+SSL_CERT_FILE="/etc/pki/tls/cert.pem" # colibry
+#SSL_CERT_FILE="/etc/ssl/certs/ca-certificates.crt"  # Public library
+
 
 # Create the configuration directory if it doesn't exist
 mkdir -p "$NIX_CONF_DIR"
