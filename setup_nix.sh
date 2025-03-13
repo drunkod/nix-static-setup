@@ -40,4 +40,5 @@ echo "~/nixstatic shell nixpkgs#nix nixpkgs#bashInteractive --command bash"
 echo "You can now use commands like 'nix profile install'."
 echo "Note: You cannot recursively enter another Nix shell!"
 echo "export NIXPKGS_ALLOW_UNFREE=1 && ~/nixstatic shell --impure nixpkgs#nix nixpkgs#bashInteractive nixpkgs#curlWithGnuTls nixpkgs#git nixpkgs#vscode --command bash"
-
+echo "PNPM fix error export NODE_EXTRA_CA_CERTS='/etc/pki/tls/cert.pem'"
+echo "export NIXPKGS_ALLOW_UNFREE=1 NODE_EXTRA_CA_CERTS="/etc/pki/tls/cert.pem" && ~/nixstatic shell --impure nixpkgs#nix nixpkgs#bashInteractive nixpkgs#curlWithGnuTls nixpkgs#git nixpkgs#vscode nixpkgs#nodejs_22 nixpkgs#pnpm --command bash"
