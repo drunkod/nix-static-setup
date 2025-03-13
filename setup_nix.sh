@@ -39,4 +39,5 @@ echo "To enter a Nix shell, use:"
 echo "~/nixstatic shell nixpkgs#nix nixpkgs#bashInteractive --command bash"
 echo "You can now use commands like 'nix profile install'."
 echo "Note: You cannot recursively enter another Nix shell!"
+echo "export NIXPKGS_ALLOW_UNFREE=1 && ~/nixstatic shell --impure nixpkgs#nix nixpkgs#bashInteractive nixpkgs#curlWithGnuTls nixpkgs#git nixpkgs#vscode --command bash"
 
