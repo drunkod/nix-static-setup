@@ -10,6 +10,7 @@ sudo mkdir -p /home/jules/.config/nix
 # Create nix.conf for the installation and for future use.
 # Using 'relaxed' sandbox for better compatibility in constrained environments.
 sudo tee /home/jules/.config/nix/nix.conf > /dev/null <<EOF
+filter-syscalls = false
 sandbox = relaxed
 experimental-features = nix-command flakes
 EOF
